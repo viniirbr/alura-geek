@@ -8,3 +8,12 @@
         right: 30px;
     }
 }
+
+@media screen and (min-width: 900px) {
+    
+    .search__input {
+        right: 50px;
+        height: 25px;
+    }
+
+}

@@ -9,3 +9,12 @@
         right: 60px;
     }
 }
+
+@media screen and (min-width: 900px) {
+    
+    .search__icon {
+        position: relative;
+        right: 90px;
+    }
+
+}
