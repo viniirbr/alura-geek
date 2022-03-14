@@ -1,0 +1,7 @@
+@media screen and (min-width: 600px) {
+    .highlight__description {
+        position: relative;
+        top: 2px;
+
+    }
+}

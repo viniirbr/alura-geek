@@ -6,3 +6,21 @@
     gap: 10px;
     margin-left: 20px;
 }
+
+@media screen and (min-width: 600px) {
+    .highlight__content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 175px;
+        gap: 15px;
+
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .highlight__content {
+        margin-left: 80px;
+
+    }
+}
