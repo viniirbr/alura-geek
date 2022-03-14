@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 20px;
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .header button {
+        order: 3;
+    }
+    .header div {
+        order: 2;
+    }
+
+}

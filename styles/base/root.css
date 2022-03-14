@@ -1,0 +1,9 @@
+:root {
+    --primary-color: #fff;
+    --accent-color: #2A7AE4;
+    --primary-text: #464646;
+}
+
+.display-none {
+    display: none;
+}

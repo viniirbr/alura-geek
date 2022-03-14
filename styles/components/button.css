@@ -1,0 +1,8 @@
+.button {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    border: none;
+    padding: 10px;
+}

@@ -1,0 +1,6 @@
+.header__button {
+    background: var(--primary-color);
+    color: var(--accent-color);
+    width: 20%;
+    min-width: 80px;
+}

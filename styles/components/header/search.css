@@ -1,0 +1,21 @@
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 64px;
+    transition: 0.5s ease-out;
+    background: var(--primary-color);
+}
+
+.search:hover {
+    width: 200px;
+}
+
+
+.search input::placeholder {
+    color: transparent;
+}
+
+
+
+
