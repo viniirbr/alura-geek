@@ -8,4 +8,10 @@
     width: 100px;
     text-align: center;
     font-size: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background: rgba(85, 149, 233, 1);
 }

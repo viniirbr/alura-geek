@@ -2,7 +2,11 @@
     background: var(--primary-color);
     color: var(--accent-color);
     font-weight: 600;
-    width: 20%;
-    min-width: 80px;
+    width: 130px;
     border: 2px solid var(--accent-color);
+    transition: 0.5s;
+}
+
+.header__button:hover {
+    background: rgba(212, 228, 250, 1);
 }
