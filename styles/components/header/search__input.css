@@ -2,4 +2,9 @@
     width: 100%;
 }
 
-
+@media screen and (min-width: 600px) {
+    .search__input {
+        position: relative;
+        right: 30px;
+    }
+}

@@ -2,3 +2,10 @@
     position: relative;
     right: 30px;
 }
+
+@media screen and (min-width: 600px) {
+    .search__icon {
+        position: relative;
+        right: 60px;
+    }
+}

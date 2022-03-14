@@ -1,6 +1,8 @@
 .header__button {
     background: var(--primary-color);
     color: var(--accent-color);
+    font-weight: 600;
     width: 20%;
     min-width: 80px;
+    border: 2px solid var(--accent-color);
 }

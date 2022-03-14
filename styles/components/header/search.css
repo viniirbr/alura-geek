@@ -8,12 +8,26 @@
 }
 
 .search:hover {
-    width: 200px;
+    width: 80%;
 }
 
 
 .search input::placeholder {
     color: transparent;
+}
+
+@media screen and (min-width: 600px) {
+    .search {
+        width: 40%;
+    }
+
+    .search:hover {
+        width: 40%;
+    }
+    .search input::placeholder {
+        color: #ccc;
+    }
+
 }
 
 
