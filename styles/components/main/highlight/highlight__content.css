@@ -1,0 +1,8 @@
+.highlight__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 110px;
+    gap: 10px;
+    margin-left: 20px;
+}

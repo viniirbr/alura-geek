@@ -1,0 +1,11 @@
+.highlight {
+    height: 230px;
+    background: url('../../../../img/banner.png') center no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-width: 600px) {
+    .highlight {
+        height: 300px;
+    }
+}

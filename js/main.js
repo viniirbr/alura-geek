@@ -1,7 +1,6 @@
 import { toggleDisplay } from "./scripts/toggleDisplay.js";
 
 const MOBILE_MAX_WIDTH = 600;
-console.log(window.screen.availWidth);
 
 if (window.screen.availWidth < MOBILE_MAX_WIDTH) { //functions to be executed in mobile
     const loginButton = document.querySelector('.header__button');
@@ -12,7 +11,7 @@ if (window.screen.availWidth < MOBILE_MAX_WIDTH) { //functions to be executed in
     })
 
     searchButton.addEventListener('mouseout', () => {
-        loginButton.classList.toggle('display-none')
+        toggleDisplay(loginButton);
     })
 }
 
