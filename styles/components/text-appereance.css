@@ -1,25 +1,39 @@
-h1, h2, h3, p {
+h1, h2, h3, h4, p, a {
     font-family: 'Raleway', sans-serif;
-    color: var(--primary-color);
 }
 
 h1 {
     font-size: 2rem;
     font-weight: 700;
+    color: var(--primary-color);
 }
 
 h2 {
     font-size: 1.7rem;
     font-weight: 700;
+    color: var(--primary-color);
 }
 
 h3 {
     font-size: 1rem;
     font-weight: 600;
+    color: var(--primary-color);
+}
+
+h4 {
+    font-weight: 700;
+    color: var(--primary-text);
 }
 
 p {
     font-weight: 400; 
+    color: var(--primary-text);
+}
+
+a {
+    color: var(--accent-color);
+    cursor: pointer;
+    font-weight: 700;
 }
 
 @media screen and (min-width: 600px) {

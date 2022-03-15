@@ -4,7 +4,6 @@
     font-weight: 600;
     width: 130px;
     border: 2px solid var(--accent-color);
-    transition: 0.5s;
 }
 
 .header__button:hover {

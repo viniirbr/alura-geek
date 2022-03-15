@@ -1,0 +1,8 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 150px;
+    width: 40%;
+    max-width: 190px;
+}
