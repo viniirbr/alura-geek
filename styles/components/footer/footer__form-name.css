@@ -1,0 +1,6 @@
+.footer__form-name {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 10px;
+    transition: all .2s ease-in-out;  
+}

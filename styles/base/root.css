@@ -2,6 +2,9 @@
     --primary-color: #fff;
     --accent-color: #2A7AE4;
     --primary-text: #464646;
+    --light-accent-color: rgb(234, 242, 253);
+    --light-primary-text: rgba(162, 162, 162, 1);
+
 }
 
 .display-none {

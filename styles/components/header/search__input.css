@@ -1,5 +1,8 @@
 .search__input {
     width: 100%;
+    border-radius: 20px;
+    background: rgba(200, 200, 200, .2);
+    padding: 10px;
 }
 
 @media screen and (min-width: 600px) {

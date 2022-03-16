@@ -1,4 +1,4 @@
-h1, h2, h3, h4, p, a {
+h1, h2, h3, h4, p, a, li, label {
     font-family: 'Raleway', sans-serif;
 }
 
@@ -34,6 +34,16 @@ a {
     color: var(--accent-color);
     cursor: pointer;
     font-weight: 700;
+}
+
+li {
+    color: var(--primary-text);
+    text-align: center;
+    font-weight: 600;
+}
+
+label {
+    color: var(--light-primary-text);
 }
 
 @media screen and (min-width: 600px) {

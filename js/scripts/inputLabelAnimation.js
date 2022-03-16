@@ -1,5 +1,6 @@
 export function inputLabelAnimation(label, input) {
     input.addEventListener('change', () => {
+        console.log(input.value)
         if (input.value != '') {
             label.style.marginTop = '10px'
             label.style.fontSize = '0.8rem'
