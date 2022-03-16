@@ -28,6 +28,15 @@
     <link rel="stylesheet" href="styles/components/main/category/category-header.css">
     <link rel="stylesheet" href="styles/components/main/category/category-header__title.css">
     <link rel="stylesheet" href="styles/components/main/category/product__title.css">
+    <link rel="stylesheet" href="styles/components/footer/footer.css">
+    <link rel="stylesheet" href="styles/components/footer/footer__img.css">
+    <link rel="stylesheet" href="styles/components/footer/footer__info.css">
+    <link rel="stylesheet" href="styles/components/footer/footer__nav-items.css">
+    <link rel="stylesheet" href="styles/components/footer/footer__contact.css">
+    <link rel="stylesheet" href="styles/components/footer/footer__input-text.css">
+    <link rel="stylesheet" href="styles/components/footer/footer__contact-title.css">
+    <link rel="stylesheet" href="styles/components/footer/footer__form-name.css">
+    <link rel="stylesheet" href="styles/components/footer/footer__input-container.css">
     <title>Alura Geek</title>
 </head>
 
@@ -52,62 +61,83 @@
             </div>
         </section>
         <section class="categories-list">
-            <section class="category first-category">
+            <section class="category">
                 <div class="category-header">
-                    <h3 class="category-header__title">Star Wars</h3>                   
+                    <h3 class="category-header__title">Star Wars</h3>
                     <div class="see-all">
                         <a class="see-all__title">Ver tudo</a>
                         <img class="see-all__img" src="img/rigth-arrow.svg" alt="Ver tudo">
-                    </div>         
+                    </div>
                 </div>
                 <div class="products">
                     <div class="product">
-                       <img src="img/star-wars1.png" alt="Produto XYZ">
-                       <h3 class="product__title">Produto XYZ</h3>
-                       <h4>R$ 60,00</h4>
-                       <a>Ver produto</a> 
+                        <img src="img/star-wars1.png" alt="Produto XYZ">
+                        <h3 class="product__title">Produto XYZ</h3>
+                        <h4>R$ 60,00</h4>
+                        <a>Ver produto</a>
                     </div>
                     <div class="product">
                         <img src="img/star-wars1.png" alt="Produto XYZ">
                         <h3 class="product__title">Produto XYZ</h3>
                         <h4>R$ 60,00</h4>
-                        <a>Ver produto</a> 
-                     </div>
+                        <a>Ver produto</a>
+                    </div>
                 </div>
-                
+
             </section>
 
             <section class="category first-category">
                 <div class="category-header">
-                    <h3 class="category-header__title">Star Wars</h3>                   
+                    <h3 class="category-header__title">Star Wars</h3>
                     <div class="see-all">
                         <a class="see-all__title">Ver tudo</a>
                         <img class="see-all__img" src="img/rigth-arrow.svg" alt="Ver tudo">
-                    </div>         
+                    </div>
                 </div>
                 <div class="products">
                     <div class="product">
-                       <img src="img/star-wars1.png" alt="Produto XYZ">
-                       <h3 class="product__title">Produto XYZ</h3>
-                       <h4>R$ 60,00</h4>
-                       <a>Ver produto</a> 
+                        <img src="img/star-wars1.png" alt="Produto XYZ">
+                        <h3 class="product__title">Produto XYZ</h3>
+                        <h4>R$ 60,00</h4>
+                        <a>Ver produto</a>
                     </div>
                     <div class="product">
                         <img src="img/star-wars1.png" alt="Produto XYZ">
                         <h3 class="product__title">Produto XYZ</h3>
                         <h4>R$ 60,00</h4>
-                        <a>Ver produto</a> 
-                     </div>
+                        <a>Ver produto</a>
+                    </div>
                 </div>
-                
+
             </section>
-
-
         </section>
 
     </main>
-    <footer>
+    <footer class="footer">
+        <section class="footer__info">
+            <img class="footer__img" src="img/logo.svg" alt="">
+            <nav class="footer__nav">
+                <ul class="footer__nav-items">
+                    <li>Quem somos nós</li>
+                    <li>Política de privacidade</li>
+                    <li>Programa de fidelidade</li>
+                    <li>Nossas lojas</li>
+                    <li>Quero ser franqueado</li>
+                    <li>Anuncie aqui</li>
+                </ul>
+            </nav>
+        </section>
+        <form class="footer__contact" action="">
+            <h3 class="footer__contact-title">Fale conosco</h3>
+            <div class="footer__input-container">
+                <label class="footer__form-name" for="footer-input-name">Nome</label>
+                <input class="input-text form-input-text footer__input-text" type="text" id="footer-input-name">
+            </div>
 
+            <textarea class="input-text form-input-text" placeholder="Escreva sua mensagem" rows="4"
+                style="resize: none;"></textarea>
+        </form>
+        <button class="button footer__form-button">Enviar mensagem</button>
     </footer>
     <script type="module" src="js/main.js"></script>
 </body>

@@ -1,4 +1,5 @@
 import { toggleDisplay } from "./scripts/toggleDisplay.js";
+import { inputLabelAnimation } from "./scripts/inputLabelAnimation.js";
 
 const MOBILE_MAX_WIDTH = 600;
 
@@ -14,5 +15,13 @@ if (window.screen.availWidth < MOBILE_MAX_WIDTH) { //functions to be executed in
         toggleDisplay(loginButton);
     })
 }
+
+const input = document.querySelector('.footer__input-text');
+const label = document.querySelector('.footer__form-name');
+inputLabelAnimation(label, input);
+
+
+
+
 
 
