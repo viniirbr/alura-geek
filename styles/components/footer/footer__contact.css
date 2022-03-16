@@ -3,3 +3,15 @@
     flex-direction: column;
     gap: 15px;
 }
+
+@media screen and (min-width: 600px) {
+    .footer__contact {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .footer__contact {
+        width: 50%;
+    }
+}

@@ -4,3 +4,15 @@
     gap: 15px;
     margin-top: 10px;
 }
+
+@media screen and (min-width: 600px) {
+    .footer__nav-items {
+        align-items: flex-start;
+        gap: 20px;
+
+    }
+
+    .footer__nav-items li {
+        text-align: unset;
+    }
+}

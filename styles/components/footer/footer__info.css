@@ -3,3 +3,17 @@
     flex-direction: column;
     align-items: center;
 }
+
+@media screen and (min-width: 600px) {
+    .footer__info {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .footer__info {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 40%;
+    }
+}

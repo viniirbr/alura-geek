@@ -5,3 +5,11 @@
     padding: 10px;
     gap: 25px;
 }
+
+@media screen and (min-width: 600px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+    }
+}
