@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  },
+  "name": "alura-geek",
+  "description": "E-commerce page designed for the 3rd edition of Alura Challenge Front-End.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viniirbr/alura-geek.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viniirbr/alura-geek/issues"
+  },
+  "homepage": "https://github.com/viniirbr/alura-geek#readme"
+}
