@@ -1,0 +1,85 @@
+{
+    "products": [{
+        "name":"Produto XYZ",
+        "img":"./img/star-wars1",
+        "price":"60.0",
+        "category":"Star Wars",
+        "linkToPage":"" 
+    },
+    {
+        "name":"Produto XYZ",
+        "img":"./img/star-wars2",
+        "price":"60.0",
+        "category":"Star Wars",
+        "linkToPage":"" 
+    },
+    {
+        "name":"Produto XYZ",
+        "img":"./img/star-wars3",
+        "price":"60.0",
+        "category":"Star Wars",
+        "linkToPage":"" 
+    },{
+        "name":"Produto XYZ",
+        "img":"./img/star-wars4",
+        "price":"60.0",
+        "category":"Star Wars",
+        "linkToPage":"" 
+    },
+    {
+        "name":"Controle XYZ",
+        "img":"./img/consoles1",
+        "price":"60.0",
+        "category":"Consoles",
+        "linkToPage":"" 
+    },
+    {
+        "name":"Controle e console XYZ",
+        "img":"./img/consoles2",
+        "price":"60.0",
+        "category":"Consoles",
+        "linkToPage":"" 
+    },
+    {
+        "name":"Console XYZ",
+        "img":"./img/consoles3",
+        "price":"60.0",
+        "category":"Consoles",
+        "linkToPage":"" 
+    },
+    {
+        "name":"Controle XYZ",
+        "img":"./img/consoles4",
+        "price":"60.0",
+        "category":"Consoles",
+        "linkToPage":"" 
+    },
+    {
+        "name":"Camisa Atari",
+        "img":"./img/diversos1",
+        "price":"60.0",
+        "category":"Diversos",
+        "linkToPage":"" 
+    },
+    {
+        "name":"Camisa SNES",
+        "img":"./img/diversos2",
+        "price":"60.0",
+        "category":"Diversos",
+        "linkToPage":"" 
+    },
+    {
+        "name":"Controle e console XYZ",
+        "img":"./img/diversos3",
+        "price":"60.0",
+        "category":"Diversos",
+        "linkToPage":"" 
+    },
+    {
+        "name":"Controle e console XYZ",
+        "img":"./img/diversos4",
+        "price":"60.0",
+        "category":"Diversos",
+        "linkToPage":"" 
+    }]
+}
