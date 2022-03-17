@@ -1,3 +1,7 @@
+@import url(highlight__content.css);
+@import url(highlight__description.css);
+@import url(highlight__mainTitle.css);
+
 .highlight {
     height: 230px;
     background: url('../../../../img/banner.png') center no-repeat;

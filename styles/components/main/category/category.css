@@ -1,3 +1,10 @@
+@import url(categories-list.css);
+@import url(category-header.css);
+@import url(category-header__title.css);
+@import url(product.css);
+@import url(product__title.css);
+@import url(products.css);
+
 .category {
     margin-top: 18px;
 }

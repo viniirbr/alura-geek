@@ -1,3 +1,14 @@
+@import url(footer__contact.css);
+@import url(footer__contact-title.css);
+@import url(footer__form-button.css);
+@import url(footer__form-name.css);
+@import url(footer__img.css);
+@import url(footer__info.css);
+@import url(footer__input-container.css);
+@import url(footer__input-text.css);
+@import url(footer__nav-items.css);
+
+
 .footer {
     background: var(--light-accent-color);
     display: flex;
