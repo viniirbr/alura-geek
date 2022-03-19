@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "concurrently": "^7.0.0",
     "typescript": "^4.6.2"
   },
   "name": "alura-geek",
@@ -7,7 +8,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "watch": "tsc -w"
+    "server": "node ./server.js",
+    "watch": "tsc -w",
+    "dev": "concurrently \"npm run server\" \"npm run watch\"",
+    "start": "npm run server"
   },
   "repository": {
     "type": "git",
@@ -18,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/viniirbr/alura-geek/issues"
   },
-  "homepage": "https://github.com/viniirbr/alura-geek#readme"
+  "homepage": "https://github.com/viniirbr/alura-geek#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
 }
