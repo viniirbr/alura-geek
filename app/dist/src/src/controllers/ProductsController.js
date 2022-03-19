@@ -1,7 +1,19 @@
+import { ProductView } from "../views/ProductView.js";
 export class ProductsController {
-    constructor() {
+    constructor(_products) {
+        this._products = _products;
     }
-    static testController() {
-        console.log('olá');
+    showProducts() {
+        let categories = this.getCategories(this._products);
+        categories.forEach(category => {
+            let productView = new ProductView();
+            productView.AddProductsOfCategory(this._products, category, 3);
+        });
+    }
+    getCategories(products) {
+        let productsCategory = products.map((product) => {
+            return product.category;
+        });
+        return [...new Set(productsCategory)];
     }
 }
