@@ -29,9 +29,6 @@ fetch('https://alura-geek.herokuapp.com/products')
         
     })
 
-    
-
-
 
 const input = document.querySelector('.footer__input-text');
 const label = document.querySelector('.footer__form-name');

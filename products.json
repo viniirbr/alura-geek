@@ -1,83 +1,83 @@
 {
     "products": [{
         "name":"Produto XYZ",
-        "img":"./img/star-wars1",
+        "imgUrl":"https://raw.githubusercontent.com/viniirbr/alura-geek/main/img/star-wars1.png",
         "price":"60.0",
         "category":"Star Wars",
         "linkToPage":"" 
     },
     {
         "name":"Produto XYZ",
-        "img":"./img/star-wars2",
+        "imgUrl":"https://raw.githubusercontent.com/viniirbr/alura-geek/main/img/star-wars2.png",
         "price":"60.0",
         "category":"Star Wars",
         "linkToPage":"" 
     },
     {
         "name":"Produto XYZ",
-        "img":"./img/star-wars3",
+        "imgUrl":"https://raw.githubusercontent.com/viniirbr/alura-geek/main/img/star-wars3.png",
         "price":"60.0",
         "category":"Star Wars",
         "linkToPage":"" 
     },{
         "name":"Produto XYZ",
-        "img":"./img/star-wars4",
+        "imgUrl":"https://raw.githubusercontent.com/viniirbr/alura-geek/main/img/star-wars4.png",
         "price":"60.0",
         "category":"Star Wars",
         "linkToPage":"" 
     },
     {
         "name":"Controle XYZ",
-        "img":"./img/consoles1",
+        "imgUrl":"https://raw.githubusercontent.com/viniirbr/alura-geek/main/img/consoles1.png",
         "price":"60.0",
         "category":"Consoles",
         "linkToPage":"" 
     },
     {
         "name":"Controle e console XYZ",
-        "img":"./img/consoles2",
+        "imgUrl":"https://raw.githubusercontent.com/viniirbr/alura-geek/main/img/consoles2.png",
         "price":"60.0",
         "category":"Consoles",
         "linkToPage":"" 
     },
     {
         "name":"Console XYZ",
-        "img":"./img/consoles3",
+        "imgUrl":"https://raw.githubusercontent.com/viniirbr/alura-geek/main/img/consoles3.png",
         "price":"60.0",
         "category":"Consoles",
         "linkToPage":"" 
     },
     {
         "name":"Controle XYZ",
-        "img":"./img/consoles4",
+        "imgUrl":"https://raw.githubusercontent.com/viniirbr/alura-geek/main/img/consoles4.png",
         "price":"60.0",
         "category":"Consoles",
         "linkToPage":"" 
     },
     {
         "name":"Camisa Atari",
-        "img":"./img/diversos1",
+        "imgUrl":"https://raw.githubusercontent.com/viniirbr/alura-geek/main/img/diversos1.png",
         "price":"60.0",
         "category":"Diversos",
         "linkToPage":"" 
     },
     {
         "name":"Camisa SNES",
-        "img":"./img/diversos2",
+        "imgUrl":"https://raw.githubusercontent.com/viniirbr/alura-geek/main/img/diversos2.png",
         "price":"60.0",
         "category":"Diversos",
         "linkToPage":"" 
     },
     {
         "name":"Controle e console XYZ",
-        "img":"./img/diversos3",
+        "imgUrl":"https://raw.githubusercontent.com/viniirbr/alura-geek/main/img/diversos3.png",
         "price":"60.0",
         "category":"Diversos",
         "linkToPage":"" 
     },
     {
         "name":"Controle e console XYZ",
-        "img":"./img/diversos4",
+        "imgUrl":"https://raw.githubusercontent.com/viniirbr/alura-geek/main/img/diversos4.png",
         "price":"60.0",
         "category":"Diversos",
         "linkToPage":"" 
