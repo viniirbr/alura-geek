@@ -4,38 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/index.css"/>
-
-    <title>Alura Geek</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <title>Alura Geek | Login</title>
 </head>
 
 <body>
     <header class="header">
         <img src="img/logo.svg" alt="Logomarca da Alura Geek" class="header__logo">
-        <a class="button header__button" href="login.html">Login</a>
+        <button class="button header__button">Login</button>
 
         <div class="search">
             <input type="text" placeholder="O que deseja encontrar?" class="input-text search__input">
             <img src="img/search.svg" alt="Buscar produto" class="search__icon">
         </div>
-
-
     </header>
-    <main class="main">
-        <section class="highlight">
-            <div class="highlight__content">
-                <h2 class="highlight__mainTitle">Dezembro Promocional</h2>
-                <h3 class="highlight__description">Produtos selecionados com 33% de desconto</h3>
-                <a class="button">Ver consoles</a>
-            </div>
-        </section>
-        <section class="categories-list">
-        </section>
 
+    <main class="main-login">
+        <form action="" class="login-form">
+            <h2 class="login-form__title">Iniciar sessão</h2>
+            <label for="">Email</label>
+            <input type="email">
+            <label for="">Senha</label>
+            <input type="password">
+        </form>
     </main>
+
     <footer class="footer">
         <section class="footer__info">
             <img class="footer__img" src="img/logo.svg" alt="">
@@ -63,8 +56,10 @@
 
         </form>
     </footer>
-    <p style="text-align: center; margin:20px;">Desenvolvido por <a href="https://github.com/viniirbr">Vinicius Ribeiro</a><br>2022<br></p>
-    <script type="module" src="app/dist/src/app.js"></script>
+    <p style="text-align: center; margin:20px;">Desenvolvido por <a href="https://github.com/viniirbr">Vinicius
+            Ribeiro</a><br>2022<br></p>
+    <script type="module" src=""></script>
+
 </body>
 
 </html>
