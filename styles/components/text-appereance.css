@@ -34,6 +34,7 @@ a {
     color: var(--accent-color);
     cursor: pointer;
     font-weight: 700;
+    text-decoration: none;
 }
 
 li {
