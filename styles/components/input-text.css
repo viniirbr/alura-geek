@@ -7,7 +7,20 @@
     padding: 10px;
 }
 
+.input-text:focus-visible {
+    outline: 2px solid var(--accent-color);
+}
+
 .form-input-text {
     border-radius: 3px;
     box-shadow: 0 2px 0 #ccc;
+    height: 30px;
+}
+
+.input-text::placeholder {
+    font-weight: 400;
+}
+
+textarea.form-input-text {
+    height: 100px;
 }

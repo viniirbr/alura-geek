@@ -4,6 +4,7 @@ import { inputLabelAnimation } from "./src/scripts/inputLabelAnimation.js";
 import { Product } from './src/models/Product.js';
 
 const MOBILE_MAX_WIDTH: number = 600;
+//add resize event
 
 if (window.screen.availWidth < MOBILE_MAX_WIDTH) { //functions to be executed in mobile
     const loginButton = document.querySelector('.header__button') as HTMLElement;
