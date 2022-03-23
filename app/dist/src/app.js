@@ -14,7 +14,15 @@ if (window.screen.availWidth < MOBILE_MAX_WIDTH) {
 }
 fetch('https://alura-geek.herokuapp.com/products')
     .then((res) => {
-    return res.json();
+    const spinner = document.querySelector('.spinner-border');
+    spinner.classList.toggle('spinner-border');
+    if (res.ok) {
+        return res.json();
+    }
+    else {
+        const error = new Error('Erro na requisição');
+        throw error;
+    }
 })
     .then((data) => {
     let products = data;
