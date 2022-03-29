@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/viniirbr/alura-geek#readme",
   "dependencies": {
-    "json-server": "^0.17.0"
+    "json-server": "^0.17.0",
+    "lowdb": "^3.0.0"
   }
 }
