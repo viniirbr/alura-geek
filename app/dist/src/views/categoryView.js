@@ -11,7 +11,6 @@ export class CategoryView {
                 <h3 class="category-header__title">${this._category}</h3>
             `;
         if (this._category == 'Todos os produtos') {
-            console.log('a');
             const button = document.createElement('button');
             button.classList.add('button');
             button.innerText = 'Adicionar produto';

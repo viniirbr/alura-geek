@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "outDir": "app/dist/src",
+        "outDir": "app/dist/",
         "target": "ES6",
         "noEmitOnError": true,
         "removeComments": true,

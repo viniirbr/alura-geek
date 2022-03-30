@@ -1,0 +1,13 @@
+.all-products-list {
+    margin: 20px;
+}
+
+.all-products-list .category .products {
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 600px) {
+    .all-products-list {
+        margin: 50px 30px;
+    }
+}

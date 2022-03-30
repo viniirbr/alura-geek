@@ -7,6 +7,9 @@ export class Product {
         this._category = _category;
         this._linkToPage = _linkToPage;
     }
+    get id() {
+        return this._id;
+    }
     get name() {
         return this.name;
     }

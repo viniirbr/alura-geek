@@ -8,9 +8,7 @@ export class ProductsController {
     private parentOfCategories = document.querySelector('.categories-list') as HTMLElement;
     private allProductsContainer = document.querySelector('[all-products-container]') as HTMLElement
 
-    constructor(private _products: Array<Product>) { 
-        console.log(this.parentOfCategories, this.allProductsContainer)
-    }
+    constructor(private _products: Array<Product>) {}
 
 
     public showProductsByCategory() {
@@ -27,13 +25,7 @@ export class ProductsController {
         this.allProductsContainer.appendChild(categoryOfProductsView);
     }
 
-    private getCategories(products: Array<Product>): string[] {
-        let productsCategory = products.map((product) => {
-            return product.category;
-        });
-        return [...new Set(productsCategory)];
-    }
-
+    
     private categoryOfProductsView(products: Product[], category: string): HTMLElement {
         if (category != "Todos os produtos") {
             products = products.splice(0,4);
@@ -59,6 +51,12 @@ export class ProductsController {
         })
         return products;
     }
-
+    
+    private getCategories(products: Array<Product>): string[] {
+        let productsCategory = products.map((product) => {
+            return product.category;
+        });
+        return [...new Set(productsCategory)];
+    }
 
 }
