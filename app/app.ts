@@ -34,7 +34,7 @@ fetch('https://alura-geek.herokuapp.com/products')
     .then((data) => {
         let products: Array<Product> = data;
         let controller = new ProductsController(products)
-        controller.showProducts()
+        controller.showProductsByCategory()
         
     })
 

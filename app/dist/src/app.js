@@ -27,7 +27,7 @@ fetch('https://alura-geek.herokuapp.com/products')
     .then((data) => {
     let products = data;
     let controller = new ProductsController(products);
-    controller.showProducts();
+    controller.showProductsByCategory();
 });
 const input = document.querySelector('.footer__input-text');
 const label = document.querySelector('.footer__form-name');
