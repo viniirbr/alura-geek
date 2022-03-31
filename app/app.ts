@@ -1,7 +1,8 @@
-import { ProductsController } from './src/controllers/ProductsController.js'
-import { toggleDisplay } from "./src/scripts/toggleDisplay.js"
+import { ProductsController } from "./src/controllers/ProductsController.js";
+import { toggleDisplay } from "./src/scripts/toggleDisplay.js";
 import { inputLabelAnimation } from "./src/scripts/inputLabelAnimation.js";
-import { Product } from './src/models/Product.js';
+import { Product } from "./src/models/Product.js";
+
 
 const MOBILE_MAX_WIDTH: number = 600;
 //add resize event

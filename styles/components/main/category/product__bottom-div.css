@@ -1,0 +1,14 @@
+.product__bottom-div {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.product__bottom-div img {
+    width: 20px;
+    height: 25px;
+    cursor: pointer;
+    filter: invert(12%) sepia(68%) saturate(7490%) hue-rotate(11deg) brightness(74%) contrast(119%);
+
+}

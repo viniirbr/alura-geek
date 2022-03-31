@@ -19,8 +19,10 @@ export class ProductsController {
         this.allProductsContainer.appendChild(categoryOfProductsView);
     }
     categoryOfProductsView(products, category) {
+        let hasDeleteButton = true;
         if (category != "Todos os produtos") {
             products = products.splice(0, 4);
+            hasDeleteButton = false;
         }
         const categoryViewClass = new CategoryView(category);
         const categoryView = categoryViewClass.categoryView();
@@ -28,7 +30,7 @@ export class ProductsController {
         productsDiv.classList.add('products');
         products.forEach((product) => {
             const productViewClass = new ProductView(product);
-            productsDiv.appendChild(productViewClass.productInsideListView());
+            productsDiv.appendChild(productViewClass.productInsideListView(hasDeleteButton));
         });
         categoryView.appendChild(productsDiv);
         return categoryView;

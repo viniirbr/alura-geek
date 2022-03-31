@@ -1,4 +1,4 @@
-import { ProductsController } from './src/controllers/ProductsController.js';
+import { ProductsController } from "./src/controllers/ProductsController.js";
 import { toggleDisplay } from "./src/scripts/toggleDisplay.js";
 import { inputLabelAnimation } from "./src/scripts/inputLabelAnimation.js";
 const MOBILE_MAX_WIDTH = 600;
