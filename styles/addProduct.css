@@ -5,6 +5,5 @@
 @import url(components/form.css);
 @import url(components/text-appereance.css);
 @import url(components/header/header.css);
-@import url(components/main/login-form/login-form.css);
+@import url(components/main/add-product-form/add-product-form.css);
 @import url(components/footer/footer.css);
-

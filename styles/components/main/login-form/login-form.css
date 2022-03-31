@@ -1,8 +1,6 @@
 @import url(login-form__title.css);
 
 .login-form {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     align-self: center;
     background: rgba(200, 200, 200, .2);

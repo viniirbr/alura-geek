@@ -1,0 +1,5 @@
+.add-product-form__title {
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    align-self: flex-start;
+}

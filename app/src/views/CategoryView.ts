@@ -14,7 +14,7 @@ export class CategoryView {
             const button = document.createElement('button') as HTMLElement;
             button.classList.add('button');
             button.innerText = 'Adicionar produto';
-            button.addEventListener('click', () => window.location.href = 'add product page')
+            button.addEventListener('click', () => window.location.href = '/addProduct.html')
             categoryHeader.append(button);
         } else {
             categoryHeader.insertAdjacentHTML('beforeend', `

@@ -1,0 +1,11 @@
+.add-product-form__image-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    height: 120px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: dashed 2px var(--light-primary-text);
+}

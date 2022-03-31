@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/addProduct.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Alura Geek</title>
 </head>
 
@@ -23,21 +24,24 @@
             <img src="img/search.svg" alt="Buscar produto" class="search__icon">
         </div>
     </header>
-    <main class="main">
-        <section class="highlight">
-            <div class="highlight__content">
-                <h2 class="highlight__mainTitle">Dezembro Promocional</h2>
-                <h3 class="highlight__description">Produtos selecionados com 33% de desconto</h3>
-                <a class="button">Ver consoles</a>
-            </div>
-
-            <div class="spinner-border text-primary" role="status" style="display: block; position: relative; left: 50%;">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-
-        </section>
-        <section class="categories-list">
-        </section>
+    <main class="main" >
+        <form class="add-product-form">
+            <h3 class="add-product-form__title">Adicionar produto</h3>
+            <label class="add-product-form__image-input" for="file-input">
+                <span class="material-icons">add</span>
+                <p>Adicionar uma imagem para o produto</p>
+            </label>
+            <input type="file" class="add-product-form__image-input" id="file-input"/>
+            <label>Nome do produto</label>
+            <input class="input-text form-input-text" type="text"/>
+            <label>Categoria</label>
+            <input class="input-text form-input-text" type="text"/>
+            <label>Preço (R$)</label>
+            <input class="input-text form-input-text" type="number"/>
+            <label>Descrição</label>
+            <textarea class="input-text form-input-text" type="text" rows="2"></textarea>
+            <button class="button add-product-form__button">Adicionar produto</button>
+        </form>
 
     </main>
     <footer class="footer">
