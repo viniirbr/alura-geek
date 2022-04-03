@@ -1,12 +1,11 @@
+import { Product } from "../models/Product.js";
 function createProduct(product) {
-    const randonId = Math.ceil(Math.random() * 1000);
     const object = {
-        "id": randonId,
+        "id": product.id,
         "name": product.name,
         "imgUrl": product.imgUrl,
         "price": product.price,
-        "category": product.category,
-        "linkToPage": product.linkToPage
+        "category": product.category
     };
     const options = {
         method: 'POST',
@@ -18,4 +17,17 @@ function createProduct(product) {
     fetch('https://alura-geek.herokuapp.com/products', options)
         .catch((e) => console.log(e.status));
 }
-export {};
+const submitButton = document.querySelector('.add-product-form__button');
+const nameInput = document.querySelector('[add-product__name-input]');
+const categoryInput = document.querySelector('[add-product__category-input]');
+const priceInput = document.querySelector('[add-product__price-input]');
+const descriptionInput = document.querySelector('[add-product__description-input]');
+submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    const randonId = Math.ceil(Math.random() * 1000);
+    const imgUrl = "https://raw.githubusercontent.com/viniirbr/alura-geek/main/img/star-wars2.png";
+    const name = nameInput.value;
+    const product = new Product(randonId, name, imgUrl, parseInt(priceInput.value), categoryInput.value, descriptionInput.value);
+    console.log(product);
+    createProduct(product);
+});

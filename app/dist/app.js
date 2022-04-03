@@ -25,6 +25,10 @@ fetch('https://alura-geek.herokuapp.com/products')
     }
 })
     .then((data) => {
+    data.map(item => {
+        item.price = parseFloat(item.price);
+        return item.price;
+    });
     let products = data;
     let controller = new ProductsController(products);
     controller.showProductsByCategory();

@@ -2,6 +2,7 @@ import { ProductsController } from "./src/controllers/ProductsController.js";
 import { toggleDisplay } from "./src/scripts/toggleDisplay.js";
 import { inputLabelAnimation } from "./src/scripts/inputLabelAnimation.js";
 import { Product } from "./src/models/Product.js";
+//import { createProduct } from "./dist/src/scripts/createProduct.js"
 
 
 const MOBILE_MAX_WIDTH: number = 600;
@@ -33,6 +34,10 @@ fetch('https://alura-geek.herokuapp.com/products')
         
     })
     .then((data) => {
+        data.map(item => {
+            item.price = parseFloat(item.price)
+            return item.price;
+        })
         let products: Array<Product> = data;
         let controller = new ProductsController(products)
         controller.showProductsByCategory()

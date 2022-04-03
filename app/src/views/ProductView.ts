@@ -5,7 +5,9 @@ export class ProductView {
     constructor(private _product: Product) { }
 
     public productInsideListView(hasDeleteButton: boolean): HTMLElement {
-        const formatedPrice = parseFloat(this._product.price).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+        console.log(typeof(this._product.price))
+        //typeof(this._product.price)==='string'?
+        const formatedPrice = this._product.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
         const productView = document.createElement('div');
         productView.classList.add('product');
         productView.innerHTML = `
@@ -14,8 +16,8 @@ export class ProductView {
             <h4>${formatedPrice}</h4>
         `;
         const viewProductAnchor = document.createElement('a');
-        viewProductAnchor.href = this._product.linkToPage;
         viewProductAnchor.innerText = 'Ver produto';
+        viewProductAnchor.href = "index.html"
         if (hasDeleteButton) {
             const bottomDiv = document.createElement('div');
             bottomDiv.classList.add('product__bottom-div')
