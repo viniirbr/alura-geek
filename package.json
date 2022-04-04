@@ -1,14 +1,18 @@
 {
   "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/mongoose": "^5.11.97",
     "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15",
     "typescript": "^4.6.2"
   },
   "name": "alura-geek",
   "description": "E-commerce page designed for the 3rd edition of Alura Challenge Front-End.",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "server": "node ./server.js",
+    "server": "nodemon ./server.js",
     "watch": "tsc -w",
     "dev": "concurrently \"npm run server\" \"npm run watch\"",
     "start": "npm run server"
@@ -24,7 +28,8 @@
   },
   "homepage": "https://github.com/viniirbr/alura-geek#readme",
   "dependencies": {
+    "express": "^4.17.3",
     "json-server": "^0.17.0",
-    "lowdb": "^3.0.0"
+    "mongoose": "^6.2.9"
   }
 }
