@@ -1,9 +1,9 @@
+import { deleteProduct } from "../scripts/deleteProduct.js";
 export class ProductView {
     constructor(_product) {
         this._product = _product;
     }
     productInsideListView(hasDeleteButton) {
-        console.log(this._product);
         const formatedPrice = this._product.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
         const productView = document.createElement('div');
         productView.classList.add('product');
@@ -20,6 +20,7 @@ export class ProductView {
             bottomDiv.classList.add('product__bottom-div');
             const deleteImg = document.createElement('img');
             deleteImg.src = "/img/trash-can-solid.svg";
+            deleteImg.addEventListener('click', () => deleteProduct(this._product));
             bottomDiv.appendChild(viewProductAnchor);
             bottomDiv.appendChild(deleteImg);
             productView.appendChild(bottomDiv);

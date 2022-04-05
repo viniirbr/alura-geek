@@ -17,6 +17,16 @@ function createProduct(product: Product) {
     };
 
     fetch('https://alura-geek.herokuapp.com/products', options)
+        .then((res) => {
+            imageInput.style.display = 'block';
+            imageInputLabel.style.display = 'block';
+            displayImage.style.display = 'none';
+            uploadedImage = '';
+            nameInput.value = '';
+            categoryInput.value = '';
+            priceInput.value = '';
+            descriptionInput.value = '';
+        })
         .catch((e) => console.log(e.status));
 }
 
@@ -34,9 +44,9 @@ imageInput.addEventListener('change', function () {
     const reader = new FileReader();
     reader.addEventListener("load", () => {
         uploadedImage = reader.result;
-        console.log(uploadedImage)
         displayImage.style.backgroundImage = `url(${uploadedImage})`;
         displayImage.style.backgroundRepeat = 'no-repeat';
+        displayImage.style.backgroundPosition = 'center';
         displayImage.style.display = 'block'
     })
     reader.readAsDataURL(this.files[0])
@@ -50,6 +60,5 @@ form.addEventListener('submit', (e) => {
     const randomId = Math.ceil(Math.random() * 1000);
     const name = nameInput.value;
     const product = new Product(randomId, name, uploadedImage as string, parseInt(priceInput.value), categoryInput.value, descriptionInput.value)
-    console.log(product)
     createProduct(product)
 })
