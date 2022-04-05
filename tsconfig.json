@@ -4,7 +4,7 @@
         "target": "ES6",
         "noEmitOnError": true,
         "removeComments": true,
-        "strictNullChecks": true
+        "strictNullChecks": false,
     },
     "include": ["app/**/*"]
 }

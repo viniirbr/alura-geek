@@ -1,8 +1,8 @@
 export class Product {
-    constructor(_id, _name, _imgUrl, _price, _category, _description) {
+    constructor(_id, _name, _imgBase64, _price, _category, _description) {
         this._id = _id;
         this._name = _name;
-        this._imgUrl = _imgUrl;
+        this._imgBase64 = _imgBase64;
         this._price = _price;
         this._category = _category;
         this._description = _description;
@@ -13,8 +13,8 @@ export class Product {
     get name() {
         return this._name;
     }
-    get imgUrl() {
-        return this._imgUrl;
+    get imgBase64() {
+        return this._imgBase64;
     }
     get price() {
         return this._price;

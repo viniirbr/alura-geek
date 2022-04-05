@@ -3,12 +3,12 @@ export class ProductView {
         this._product = _product;
     }
     productInsideListView(hasDeleteButton) {
-        console.log(typeof (this._product.price));
+        console.log(this._product);
         const formatedPrice = this._product.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
         const productView = document.createElement('div');
         productView.classList.add('product');
         productView.innerHTML = `
-            <img src=${this._product.imgUrl} alt="Produto XYZ">
+            <img src=${this._product.imgBase64} alt="Produto XYZ">
             <h3 class="product__title">${this._product.name}</h3>
             <h4>${formatedPrice}</h4>
         `;

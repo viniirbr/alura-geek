@@ -3,7 +3,7 @@ function createProduct(product) {
     const object = {
         "id": product.id,
         "name": product.name,
-        "imgUrl": product.imgUrl,
+        "imgBase64": product.imgBase64,
         "price": product.price,
         "category": product.category
     };
@@ -17,17 +17,32 @@ function createProduct(product) {
     fetch('https://alura-geek.herokuapp.com/products', options)
         .catch((e) => console.log(e.status));
 }
-const submitButton = document.querySelector('.add-product-form__button');
+const form = document.querySelector('[add-product-form]');
+const imageInput = document.querySelector('[image-input]');
+const imageInputLabel = document.querySelector('[image-input-label]');
+const displayImage = document.querySelector('[display-image]');
 const nameInput = document.querySelector('[add-product__name-input]');
 const categoryInput = document.querySelector('[add-product__category-input]');
 const priceInput = document.querySelector('[add-product__price-input]');
 const descriptionInput = document.querySelector('[add-product__description-input]');
-submitButton.addEventListener('click', (e) => {
+let uploadedImage = "";
+imageInput.addEventListener('change', function () {
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+        uploadedImage = reader.result;
+        console.log(uploadedImage);
+        displayImage.style.backgroundImage = `url(${uploadedImage})`;
+        displayImage.style.backgroundRepeat = 'no-repeat';
+        displayImage.style.display = 'block';
+    });
+    reader.readAsDataURL(this.files[0]);
+    imageInputLabel.style.display = "none";
+});
+form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const randonId = Math.ceil(Math.random() * 1000);
-    const imgUrl = "https://raw.githubusercontent.com/viniirbr/alura-geek/main/img/star-wars2.png";
+    const randomId = Math.ceil(Math.random() * 1000);
     const name = nameInput.value;
-    const product = new Product(randonId, name, imgUrl, parseInt(priceInput.value), categoryInput.value, descriptionInput.value);
+    const product = new Product(randomId, name, uploadedImage, parseInt(priceInput.value), categoryInput.value, descriptionInput.value);
     console.log(product);
     createProduct(product);
 });

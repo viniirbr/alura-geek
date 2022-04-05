@@ -1,38 +1,55 @@
 import { Product } from "../models/Product.js";
 
-function createProduct(product:Product) {
+function createProduct(product: Product) {
     const object = {
         "id": product.id,
         "name": product.name,
-        "imgUrl": product.imgUrl,
+        "imgBase64": product.imgBase64,
         "price": product.price,
         "category": product.category
     }
     const options = {
-        method:'POST',
+        method: 'POST',
         body: JSON.stringify(object),
         headers: {
-            'Content-Type':'application/json'
+            'Content-Type': 'application/json'
         }
     };
 
     fetch('https://alura-geek.herokuapp.com/products', options)
-    .catch((e) => console.log(e.status));
+        .catch((e) => console.log(e.status));
 }
 
-const submitButton = document.querySelector('.add-product-form__button') as HTMLElement;
+const form = document.querySelector('[add-product-form]') as HTMLElement;
+const imageInput = document.querySelector('[image-input]') as HTMLInputElement;
+const imageInputLabel = document.querySelector('[image-input-label]') as HTMLElement;
+const displayImage = document.querySelector('[display-image]') as HTMLElement;
 const nameInput = document.querySelector('[add-product__name-input]') as HTMLInputElement;
 const categoryInput = document.querySelector('[add-product__category-input]') as HTMLInputElement;
 const priceInput = document.querySelector('[add-product__price-input]') as HTMLInputElement;
 const descriptionInput = document.querySelector('[add-product__description-input]') as HTMLInputElement;
+let uploadedImage: string | ArrayBuffer | null = "";
 
-submitButton.addEventListener('click', (e) => {
+imageInput.addEventListener('change', function () {
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+        uploadedImage = reader.result;
+        console.log(uploadedImage)
+        displayImage.style.backgroundImage = `url(${uploadedImage})`;
+        displayImage.style.backgroundRepeat = 'no-repeat';
+        displayImage.style.display = 'block'
+    })
+    reader.readAsDataURL(this.files[0])
+    imageInputLabel.style.display = "none";
+})
+
+
+form.addEventListener('submit', (e) => {
     e.preventDefault();
     //validation function
-    const randonId = Math.ceil(Math.random()*1000);
-    const imgUrl = "https://raw.githubusercontent.com/viniirbr/alura-geek/main/img/star-wars2.png";
+    const randomId = Math.ceil(Math.random() * 1000);
     const name = nameInput.value;
-    const product = new Product(randonId, name, imgUrl, parseInt(priceInput.value), categoryInput.value, descriptionInput.value)
+    const product = new Product(randomId, name, uploadedImage as string, parseInt(priceInput.value), categoryInput.value, descriptionInput.value)
     console.log(product)
     createProduct(product)
 })

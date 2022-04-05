@@ -1,6 +1,6 @@
 export class Product {
 
-    constructor(private _id: number, private _name: string, private _imgUrl: string, private _price: number, 
+    constructor(private _id: number, private _name: string, private _imgBase64: string, private _price: number, 
         private _category: string, private _description: string) {}  
 
         get id() {
@@ -11,8 +11,8 @@ export class Product {
             return this._name;
         }
 
-        get imgUrl() {
-            return this._imgUrl;
+        get imgBase64() {
+            return this._imgBase64;
         }
 
         get price() {

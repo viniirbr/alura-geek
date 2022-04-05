@@ -24,23 +24,26 @@
             <img src="img/search.svg" alt="Buscar produto" class="search__icon">
         </div>
     </header>
-    <main class="main" >
-        <form class="add-product-form">
+    <main class="main">
+        <form class="add-product-form" add-product-form>
             <h3 class="add-product-form__title">Adicionar produto</h3>
-            <label class="add-product-form__image-input" for="file-input">
+            <label class="add-product-form__image-input" for="file-input" image-input-label>
                 <span class="material-icons">add</span>
                 <p>Adicionar uma imagem para o produto</p>
             </label>
-            <input type="file" class="add-product-form__image-input" id="file-input"/>
+            <input type="file" class="add-product-form__image-input" id="file-input" accept="image/png, image/jpg"
+                image-input />
+            <div class="display-image" display-image style=" width:200px; height:200px; display:none; margin-top: 20px;"></div>
             <label>Nome do produto</label>
-            <input class="input-text form-input-text" add-product__name-input type="text"/>
+            <input class="input-text form-input-text" add-product__name-input type="text" required />
             <label>Categoria</label>
-            <input class="input-text form-input-text" add-product__category-input type="text"/>
+            <input class="input-text form-input-text" add-product__category-input type="text" required />
             <label>Preço (R$)</label>
-            <input class="input-text form-input-text" add-product__price-input type="number"/>
+            <input class="input-text form-input-text" add-product__price-input type="number" required />
             <label>Descrição</label>
-            <textarea class="input-text form-input-text" add-product__description-input type="text" rows="2"></textarea>
-            <button class="button add-product-form__button">Adicionar produto</button>
+            <textarea class="input-text form-input-text" add-product__description-input type="text" rows="2"
+                required></textarea>
+            <button class="button add-product-form__button" type="submit">Adicionar produto</button>
         </form>
 
     </main>

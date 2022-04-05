@@ -2,16 +2,15 @@ import { Product } from "../models/Product.js";
 
 export class ProductView {
 
-    constructor(private _product: Product) { }
+    constructor(private _product: Product) {}
 
     public productInsideListView(hasDeleteButton: boolean): HTMLElement {
-        console.log(typeof(this._product.price))
-        //typeof(this._product.price)==='string'?
+        console.log(this._product)
         const formatedPrice = this._product.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
         const productView = document.createElement('div');
         productView.classList.add('product');
         productView.innerHTML = `
-            <img src=${this._product.imgUrl} alt="Produto XYZ">
+            <img src=${this._product.imgBase64} alt="Produto XYZ">
             <h3 class="product__title">${this._product.name}</h3>
             <h4>${formatedPrice}</h4>
         `;

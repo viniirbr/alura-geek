@@ -5,6 +5,7 @@ export class ProductsController {
         this._products = _products;
         this.parentOfCategories = document.querySelector('.categories-list');
         this.allProductsContainer = document.querySelector('[all-products-container]');
+        console.log(this._products);
     }
     showProductsByCategory() {
         let categories = this.getCategories(this._products);

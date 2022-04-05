@@ -8,7 +8,7 @@ export class ProductsController {
     private parentOfCategories = document.querySelector('.categories-list') as HTMLElement;
     private allProductsContainer = document.querySelector('[all-products-container]') as HTMLElement
 
-    constructor(private _products: Array<Product>) {}
+    constructor(private _products: Array<Product>) {console.log(this._products)}
 
 
     public showProductsByCategory() {
