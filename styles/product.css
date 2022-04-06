@@ -1,0 +1,13 @@
+@import url(base/reset.css);
+@import url(base/root.css);
+@import url(components/input-text.css);
+@import url(components/button.css);
+@import url(components/form.css);
+@import url(components/text-appereance.css);
+@import url(components/header/header.css);
+@import url(components/main/product/product-main.css);
+@import url(components/main/product/product-info.css);
+@import url(components/main/product/product-details.css);
+@import url(components/main/product/product-similar.css);
+@import url(components/main/category/category.css);
+@import url(components/footer/footer.css);

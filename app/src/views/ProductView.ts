@@ -16,7 +16,7 @@ export class ProductView {
         `;
         const viewProductAnchor = document.createElement('a');
         viewProductAnchor.innerText = 'Ver produto';
-        viewProductAnchor.href = "index.html"
+        viewProductAnchor.href = `product.html?id=${this._product.id}`
         if (hasDeleteButton) {
             const bottomDiv = document.createElement('div');
             bottomDiv.classList.add('product__bottom-div')

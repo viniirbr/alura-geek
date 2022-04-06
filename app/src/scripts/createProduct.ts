@@ -6,7 +6,8 @@ function createProduct(product: Product) {
         "name": product.name,
         "imgBase64": product.imgBase64,
         "price": product.price,
-        "category": product.category
+        "category": product.category,
+        "description":product.description
     }
     const options = {
         method: 'POST',
@@ -17,7 +18,7 @@ function createProduct(product: Product) {
     };
 
     fetch('https://alura-geek.herokuapp.com/products', options)
-        .then((res) => {
+        .then(() => {
             imageInput.style.display = 'block';
             imageInputLabel.style.display = 'block';
             displayImage.style.display = 'none';

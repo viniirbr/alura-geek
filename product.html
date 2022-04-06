@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/product.css" />
 
     <title>Alura Geek</title>
 </head>
@@ -18,14 +18,26 @@
     <header class="header">
         <a alt="Logomarca da Alura Geek" class="header__logo" href="index.html"><img src="img/logo.svg"></a>
         <a class="button header__button" href="login.html">Login</a>
-
         <div class="search">
             <input type="text" placeholder="O que deseja encontrar?" class="input-text search__input">
             <img src="img/search.svg" alt="Buscar produto" class="search__icon">
         </div>
-
-
     </header>
+
+    <main class="product-main" product-main>
+        <section class="product-info" product-info>
+            <img class="product-info__img" product-info__img/>
+            <div class="product-details" product-details>
+                <h3 class="product-details__name" product-details__name></h3>
+                <h4 class="product-details__price" product-details__price></h4>
+                <p class="product-details__description" product-details__description></p>
+            </div>
+        </section>
+        <section class="product-similar" product-similar>
+
+        </section>
+    </main>
+
     <footer class="footer">
         <section class="footer__info">
             <img class="footer__img" src="img/logo.svg" alt="">
@@ -55,5 +67,5 @@
     </footer>
     <p style="text-align: center; margin:20px;">Desenvolvido por <a href="https://github.com/viniirbr">Vinicius
             Ribeiro</a><br>2022<br></p>
-    <script type="module" src="app/dist/src/app.js"></script>
+    <script type="module" src="app/dist/src/scripts/productPage.js"></script>
 </body>

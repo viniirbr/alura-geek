@@ -1,0 +1,19 @@
+.product-details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.product-details h3 {
+    color: var(--primary-text);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.product-details h4 {
+    margin-top: 10px;
+}
+
+.product-details p {
+    margin-top: 10px;
+}

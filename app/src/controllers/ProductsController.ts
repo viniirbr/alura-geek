@@ -7,8 +7,9 @@ export class ProductsController {
 
     private parentOfCategories = document.querySelector('.categories-list') as HTMLElement;
     private allProductsContainer = document.querySelector('[all-products-container]') as HTMLElement
+    private similarSection = document.querySelector('[product-similar]') as HTMLElement
 
-    constructor(private _products: Array<Product>) {console.log(this._products)}
+    constructor(private _products: Array<Product>) {}
 
 
     public showProductsByCategory() {
@@ -23,6 +24,11 @@ export class ProductsController {
     public listAllProducts() {
         const categoryOfProductsView = this.categoryOfProductsView(this._products, "Todos os produtos");
         this.allProductsContainer.appendChild(categoryOfProductsView);
+    }
+
+    public listSimilarProducts() {
+        const similarProductsView = this.categoryOfProductsView(this._products, "Produtos similares");
+        this.similarSection.appendChild(similarProductsView)
     }
 
     
