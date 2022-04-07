@@ -27,11 +27,15 @@
 
 @media screen and (min-width: 900px){
     .product-info {
-        justify-content: space-between;
+        justify-content: space-around;
     }
-    
     .product-info img {
         height: auto;
-        width: 40%;
+        width: 35%;
+        margin-right: 20px;
+    }
+
+    .product-info .product-details {
+        padding: 0;
     }
 }

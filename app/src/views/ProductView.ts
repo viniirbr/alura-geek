@@ -14,9 +14,7 @@ export class ProductView {
             <h3 class="product__title">${this._product.name}</h3>
             <h4>${formatedPrice}</h4>
         `;
-        const viewProductAnchor = document.createElement('a');
-        viewProductAnchor.innerText = 'Ver produto';
-        viewProductAnchor.href = `product.html?id=${this._product.id}`
+        const viewProductAnchor = this.viewProductAnchor();
         if (hasDeleteButton) {
             const bottomDiv = document.createElement('div');
             bottomDiv.classList.add('product__bottom-div')
@@ -30,6 +28,29 @@ export class ProductView {
             productView.appendChild(viewProductAnchor);
         }
         return productView;
+    }
+
+    public getProductInsideModal(): HTMLElement{
+        const formatedPrice = this._product.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+        const productView = document.createElement('div');
+        productView.classList.add('modal-product')
+        const viewProductAnchor = this.viewProductAnchor()
+        productView.innerHTML = `
+            <img src=${this._product.imgBase64}>
+            <div class='modal__product-info'>
+                <h4>${this._product.name}<h4>
+                <p>${formatedPrice}<p>
+                <a href=${viewProductAnchor}>Ver produto</a>
+            <div/>
+        `
+        return productView;
+    }
+
+    private viewProductAnchor(): HTMLElement{
+        const viewProductAnchor = document.createElement('a');
+        viewProductAnchor.innerText = 'Ver produto';
+        viewProductAnchor.href = `product.html?id=${this._product.id}`;
+        return viewProductAnchor;
     }
 
 }

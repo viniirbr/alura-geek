@@ -1,9 +1,12 @@
+import { openModal } from "../scripts/openModal.js";
+
 export class CategoryView {
 
     constructor(private _category: string) { }
 
     public categoryView(): HTMLElement {
         const categorySection = document.createElement('section');
+        categorySection.id = this._category;
         const categoryHeader = document.createElement('div');
         categoryHeader.classList.add('category-header');
         categoryHeader.innerHTML =
@@ -17,12 +20,23 @@ export class CategoryView {
             button.addEventListener('click', () => window.location.href = '/addProduct.html')
             categoryHeader.append(button);
         } else {
-            categoryHeader.insertAdjacentHTML('beforeend', `
-            <div class="see-all">
-                <a class="see-all__title">Ver tudo</a>
-                <img class="see-all__img" src="img/rigth-arrow.svg" alt="Ver tudo">
-            </div>
-        `);
+            const seeAll = document.createElement('div');
+            seeAll.classList.add('see-all');
+            const seeAllTitle = document.createElement('a')
+            seeAllTitle.classList.add('see-all__title');
+            seeAllTitle.innerText = 'Ver tudo';
+            seeAllTitle.setAttribute('data-bs-toggle','modal');
+            seeAllTitle.setAttribute('data-bs-target','#exampleModal');
+            seeAllTitle.setAttribute('type','button');
+            const seeAllImg = document.createElement('img');
+            seeAllImg.classList.add('see-all__img');
+            seeAllImg.src = "img/rigth-arrow.svg";
+            seeAll.appendChild(seeAllTitle);
+            seeAll.appendChild(seeAllImg);
+            seeAllTitle.addEventListener('click', () => {
+                openModal(this._category);
+            })
+            categoryHeader.insertAdjacentElement('beforeend', seeAll);
         }
         categorySection.append(categoryHeader);
         categorySection.classList.add('category');

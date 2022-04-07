@@ -34,7 +34,6 @@ fetch('https://alura-geek.herokuapp.com/products')
         
     })
     .then((data) => {
-        console.log(data)
         data.map(item => {
             item.price = parseFloat(item.price)
             return item.price;

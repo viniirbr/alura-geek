@@ -8,6 +8,7 @@ export class ProductsController {
     private parentOfCategories = document.querySelector('.categories-list') as HTMLElement;
     private allProductsContainer = document.querySelector('[all-products-container]') as HTMLElement
     private similarSection = document.querySelector('[product-similar]') as HTMLElement
+    private modalBody = document.querySelector('.modal-body') as HTMLElement
 
     constructor(private _products: Array<Product>) {}
 
@@ -29,6 +30,14 @@ export class ProductsController {
     public listSimilarProducts() {
         const similarProductsView = this.categoryOfProductsView(this._products, "Produtos similares");
         this.similarSection.appendChild(similarProductsView)
+    }
+
+    public listProductsInsideModal(category: string) {
+        const products = this.getProductsFromCategory(this._products, category);
+        products.forEach (product => {
+            const productView = new ProductView(product);
+            this.modalBody.append(productView.getProductInsideModal())
+        })
     }
 
     

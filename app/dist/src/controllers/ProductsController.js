@@ -6,6 +6,7 @@ export class ProductsController {
         this.parentOfCategories = document.querySelector('.categories-list');
         this.allProductsContainer = document.querySelector('[all-products-container]');
         this.similarSection = document.querySelector('[product-similar]');
+        this.modalBody = document.querySelector('.modal-body');
     }
     showProductsByCategory() {
         let categories = this.getCategories(this._products);
@@ -22,6 +23,13 @@ export class ProductsController {
     listSimilarProducts() {
         const similarProductsView = this.categoryOfProductsView(this._products, "Produtos similares");
         this.similarSection.appendChild(similarProductsView);
+    }
+    listProductsInsideModal(category) {
+        const products = this.getProductsFromCategory(this._products, category);
+        products.forEach(product => {
+            const productView = new ProductView(product);
+            this.modalBody.append(productView.getProductInsideModal());
+        });
     }
     categoryOfProductsView(products, category) {
         let hasDeleteButton = true;
