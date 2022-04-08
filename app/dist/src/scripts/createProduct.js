@@ -1,8 +1,12 @@
 import { Product } from "../models/Product.js";
 import { generateHeaderButton } from "./generateHeaderButton.js";
 import { headerResponsivity } from "./headerResponsivity.js";
+import { inputLabelAnimation } from "./inputLabelAnimation.js";
 generateHeaderButton(Boolean(localStorage.getItem('isLogged')));
 headerResponsivity();
+const input = document.querySelector('.footer__input-text');
+const label = document.querySelector('.footer__form-name');
+inputLabelAnimation(label, input);
 function createProduct(product) {
     const object = {
         "id": product.id,

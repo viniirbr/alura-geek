@@ -2,6 +2,7 @@ import { ProductsController } from "../controllers/ProductsController.js";
 import { Product } from "../models/Product.js";
 import { generateHeaderButton } from "./generateHeaderButton.js";
 import { headerResponsivity } from "./headerResponsivity.js";
+import { inputLabelAnimation } from "./inputLabelAnimation.js";
 
 const productImg = document.querySelector('[product-info__img]') as HTMLImageElement;
 const productName = document.querySelector('[product-details__name]') as HTMLElement;
@@ -10,6 +11,9 @@ const productDescription = document.querySelector('[product-details__description
 
 generateHeaderButton(Boolean(localStorage.getItem('isLogged')));
 headerResponsivity();
+const input = document.querySelector('.footer__input-text');
+const label = document.querySelector('.footer__form-name');
+inputLabelAnimation(label, input);
 
 async function getProduct() {
     const regex = /^(.*?)\id=/;

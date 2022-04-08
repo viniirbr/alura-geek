@@ -1,5 +1,4 @@
 import { ProductsController } from "./src/controllers/ProductsController.js";
-import { toggleDisplay } from "./src/scripts/toggleDisplay.js";
 import { inputLabelAnimation } from "./src/scripts/inputLabelAnimation.js";
 import { Product } from "./src/models/Product.js";
 import { generateHeaderButton } from "./src/scripts/generateHeaderButton.js";

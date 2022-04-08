@@ -1,11 +1,14 @@
 import { ProductsController } from "../controllers/ProductsController.js";
 import { generateHeaderButton } from "./generateHeaderButton.js";
 import { headerResponsivity } from "./headerResponsivity.js";
+import { inputLabelAnimation } from "./inputLabelAnimation.js";
+
 
 generateHeaderButton(Boolean(localStorage.getItem('isLogged')));
 headerResponsivity();
-
-const main = document.querySelector('[main]') as HTMLElement;
+const input = document.querySelector('.footer__input-text');
+const label = document.querySelector('.footer__form-name');
+inputLabelAnimation(label, input);
 
 fetch('https://alura-geek.herokuapp.com/products')
 .then(res => res.json())

@@ -1,8 +1,12 @@
 import { generateHeaderButton } from "./generateHeaderButton.js";
 import { headerResponsivity } from "./headerResponsivity.js";
+import { inputLabelAnimation } from "./inputLabelAnimation.js";
 
 generateHeaderButton(false)
 headerResponsivity()
+const input = document.querySelector('.footer__input-text');
+const label = document.querySelector('.footer__form-name');
+inputLabelAnimation(label, input);
 
 const emailInput = document.querySelector('[login-form__email-input') as HTMLInputElement;
 const nameInput = document.querySelector('[login-form__name-input]') as HTMLInputElement;
