@@ -35,7 +35,6 @@ export class ProductsController {
     public listProductsInsideModal(category: string) {
         const products = this.getProductsFromCategory(this._products, category);
         products.forEach (product => {
-            console.log(product.category)
             const productView = new ProductView(product);
             this.modalBody.append(productView.getProductInsideModal())
         })
