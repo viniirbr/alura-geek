@@ -9,5 +9,6 @@
 @import url(components/main/product/product-info.css);
 @import url(components/main/product/product-details.css);
 @import url(components/main/product/product-similar.css);
+@import url(components/modal/modal.css);
 @import url(components/main/category/category.css);
 @import url(components/footer/footer.css);
