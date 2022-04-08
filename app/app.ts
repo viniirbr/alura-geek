@@ -2,24 +2,18 @@ import { ProductsController } from "./src/controllers/ProductsController.js";
 import { toggleDisplay } from "./src/scripts/toggleDisplay.js";
 import { inputLabelAnimation } from "./src/scripts/inputLabelAnimation.js";
 import { Product } from "./src/models/Product.js";
-//import { createProduct } from "./dist/src/scripts/createProduct.js"
+import { generateHeaderButton } from "./src/scripts/generateHeaderButton.js";
+import { headerResponsivity } from "./src/scripts/headerResponsivity.js"
 
 
-const MOBILE_MAX_WIDTH: number = 600;
 //add resize event
 
-if (window.screen.availWidth < MOBILE_MAX_WIDTH) { //functions to be executed in mobile
-    const loginButton = document.querySelector('.header__button') as HTMLElement;
-    const searchButton = document.querySelector('.search') as HTMLInputElement;
+generateHeaderButton(Boolean(localStorage.getItem('isLogged')))
+headerResponsivity()
 
-    searchButton.addEventListener('mouseover', () => {
-        toggleDisplay(loginButton);
-    })
+//if (localStorage.getItem('isLogged') == null || )
 
-    searchButton.addEventListener('mouseout', () => {
-        toggleDisplay(loginButton);
-    })
-}
+localStorage.setItem('isLogged', 'false')
 
 fetch('https://alura-geek.herokuapp.com/products')
     .then((res) => {

@@ -1,5 +1,9 @@
 import { ProductsController } from "../controllers/ProductsController.js";
+import { generateHeaderButton } from "./generateHeaderButton.js";
+import { headerResponsivity } from "./headerResponsivity.js";
 
+generateHeaderButton(Boolean(localStorage.getItem('isLogged')));
+headerResponsivity();
 
 const main = document.querySelector('[main]') as HTMLElement;
 

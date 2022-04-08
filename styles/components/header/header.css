@@ -14,14 +14,22 @@
     width: 100%;
 }
 
+.header :nth-child(3) {
+    order: 2;
+}
+
+.header :nth-child(2) {
+    order: 3;
+}
+
 @media screen and (min-width: 600px) {
 
-    .header :nth-child(2) {
-        order: 3;
-    }
-
     .header :nth-child(3) {
-        order: 2;
+        order: initial;
+    }
+    
+    .header :nth-child(2) {
+        order: initial;
     }
 
 }

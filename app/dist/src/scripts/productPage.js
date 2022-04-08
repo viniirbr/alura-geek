@@ -9,10 +9,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { ProductsController } from "../controllers/ProductsController.js";
 import { Product } from "../models/Product.js";
+import { generateHeaderButton } from "./generateHeaderButton.js";
+import { headerResponsivity } from "./headerResponsivity.js";
 const productImg = document.querySelector('[product-info__img]');
 const productName = document.querySelector('[product-details__name]');
 const productPrice = document.querySelector('[product-details__price]');
 const productDescription = document.querySelector('[product-details__description]');
+generateHeaderButton(Boolean(localStorage.getItem('isLogged')));
+headerResponsivity();
 function getProduct() {
     return __awaiter(this, void 0, void 0, function* () {
         const regex = /^(.*?)\id=/;
@@ -26,10 +30,8 @@ function getProduct() {
         productDescription.innerText = productObject.description;
         const allProductsRaw = yield fetch(`https://alura-geek.herokuapp.com/products`);
         const allProducts = yield allProductsRaw.json();
-        const similarProducts = allProducts.filter((product) => (product.category == productObject.category) &&
-            (product.id != productObject.id));
-        const controller = new ProductsController(similarProducts);
-        controller.listSimilarProducts();
+        const controller = new ProductsController(allProducts);
+        controller.listSimilarProducts(productObject.category, productObject.id);
     });
 }
 getProduct();

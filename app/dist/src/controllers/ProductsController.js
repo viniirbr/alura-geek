@@ -12,16 +12,22 @@ export class ProductsController {
         let categories = this.getCategories(this._products);
         categories.forEach(category => {
             const productsFromCategory = this.getProductsFromCategory(this._products, category);
-            const categoryOfProductsView = this.categoryOfProductsView(productsFromCategory, category);
+            const categoryOfProductsView = this.categoryOfProductsView(productsFromCategory, category, false);
             this.parentOfCategories.append(categoryOfProductsView);
         });
     }
     listAllProducts() {
-        const categoryOfProductsView = this.categoryOfProductsView(this._products, "Todos os produtos");
+        const categoryOfProductsView = this.categoryOfProductsView(this._products, "Todos os produtos", false);
         this.allProductsContainer.appendChild(categoryOfProductsView);
     }
-    listSimilarProducts() {
-        const similarProductsView = this.categoryOfProductsView(this._products, "Produtos similares");
+    listSimilarProducts(category, id) {
+        const productsFromCategory = this.getProductsFromCategory(this._products, category);
+        const similarProducts = productsFromCategory.filter(product => {
+            if (product.id != id) {
+                return product;
+            }
+        });
+        const similarProductsView = this.categoryOfProductsView(similarProducts, category, true);
         this.similarSection.appendChild(similarProductsView);
     }
     listProductsInsideModal(category) {
@@ -31,14 +37,14 @@ export class ProductsController {
             this.modalBody.append(productView.getProductInsideModal());
         });
     }
-    categoryOfProductsView(products, category) {
+    categoryOfProductsView(products, category, isSimilarList) {
         let hasDeleteButton = true;
         if (category != "Todos os produtos") {
             products = products.splice(0, 4);
             hasDeleteButton = false;
         }
         const categoryViewClass = new CategoryView(category);
-        const categoryView = categoryViewClass.categoryView();
+        const categoryView = categoryViewClass.categoryView(isSimilarList);
         const productsDiv = document.createElement('div');
         productsDiv.classList.add('products');
         products.forEach((product) => {
@@ -49,7 +55,7 @@ export class ProductsController {
         return categoryView;
     }
     getProductsFromCategory(products, category) {
-        products = products.filter((product) => {
+        products = this._products.filter((product) => {
             if (product.category == category) {
                 return product;
             }

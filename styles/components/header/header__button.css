@@ -2,7 +2,6 @@
     background: var(--primary-color);
     color: var(--accent-color);
     font-weight: 600;
-    width: 130px;
     border: 2px solid var(--accent-color);
 }
 

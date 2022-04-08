@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 48%;
-    height: 50%;
+    height: 285px;
     gap: .4rem;
     margin-bottom: 20px;
 }
@@ -16,6 +16,11 @@
 
 
 @media screen and (min-width: 600px) {
+    
+    .product {
+        height: initial;
+    }
+    
     .product img {
         height: 300px;
     }

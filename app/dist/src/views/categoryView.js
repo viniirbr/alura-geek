@@ -3,15 +3,23 @@ export class CategoryView {
     constructor(_category) {
         this._category = _category;
     }
-    categoryView() {
+    categoryView(isSimilarProducts) {
         const categorySection = document.createElement('section');
         categorySection.id = this._category;
         const categoryHeader = document.createElement('div');
         categoryHeader.classList.add('category-header');
-        categoryHeader.innerHTML =
-            `
-                <h3 class="category-header__title">${this._category}</h3>
-            `;
+        if (isSimilarProducts) {
+            categoryHeader.innerHTML =
+                `
+                    <h3 class="category-header__title">Produtos similares</h3>
+                `;
+        }
+        else {
+            categoryHeader.innerHTML =
+                `
+                    <h3 class="category-header__title">${this._category}</h3>
+                `;
+        }
         if (this._category == 'Todos os produtos') {
             const button = document.createElement('button');
             button.classList.add('button');
@@ -26,7 +34,7 @@ export class CategoryView {
             seeAllTitle.classList.add('see-all__title');
             seeAllTitle.innerText = 'Ver tudo';
             seeAllTitle.setAttribute('data-bs-toggle', 'modal');
-            seeAllTitle.setAttribute('data-bs-target', '#exampleModal');
+            seeAllTitle.setAttribute('data-bs-target', isSimilarProducts ? '#similarModal' : '#exampleModal');
             seeAllTitle.setAttribute('type', 'button');
             const seeAllImg = document.createElement('img');
             seeAllImg.classList.add('see-all__img');
