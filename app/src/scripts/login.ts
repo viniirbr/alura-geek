@@ -2,7 +2,7 @@ import { generateHeaderButton } from "./generateHeaderButton.js";
 import { headerResponsivity } from "./headerResponsivity.js";
 import { inputLabelAnimation } from "./inputLabelAnimation.js";
 
-generateHeaderButton(false)
+generateHeaderButton(localStorage.getItem('isLogged')=='true'?true:false)
 headerResponsivity()
 const input = document.querySelector('.footer__input-text');
 const label = document.querySelector('.footer__form-name');

@@ -6,13 +6,8 @@ import { headerResponsivity } from "./src/scripts/headerResponsivity.js"
 
 
 //add resize event
-
-generateHeaderButton(Boolean(localStorage.getItem('isLogged')))
+generateHeaderButton(localStorage.getItem('isLogged')=='true'?true:false)
 headerResponsivity()
-
-//if (localStorage.getItem('isLogged') == null || )
-
-localStorage.setItem('isLogged', 'false')
 
 fetch('https://alura-geek.herokuapp.com/products')
     .then((res) => {

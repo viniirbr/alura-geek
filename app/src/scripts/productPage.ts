@@ -9,7 +9,7 @@ const productName = document.querySelector('[product-details__name]') as HTMLEle
 const productPrice = document.querySelector('[product-details__price]') as HTMLElement;
 const productDescription = document.querySelector('[product-details__description]') as HTMLElement;
 
-generateHeaderButton(Boolean(localStorage.getItem('isLogged')));
+generateHeaderButton(localStorage.getItem('isLogged')=='true'?true:false);
 headerResponsivity();
 const input = document.querySelector('.footer__input-text');
 const label = document.querySelector('.footer__form-name');
@@ -24,7 +24,7 @@ async function getProduct() {
         product.category, product.description);
     productImg.src = productObject.imgBase64;
     productName.innerText = productObject.name;
-    productPrice.innerText = productObject.price.toString();
+    productPrice.innerText = productObject.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
     productDescription.innerText = productObject.description;
     const allProductsRaw = await fetch(`https://alura-geek.herokuapp.com/products`);
     const allProducts = await allProductsRaw.json() as Product[];

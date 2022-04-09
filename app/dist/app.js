@@ -2,9 +2,8 @@ import { ProductsController } from "./src/controllers/ProductsController.js";
 import { inputLabelAnimation } from "./src/scripts/inputLabelAnimation.js";
 import { generateHeaderButton } from "./src/scripts/generateHeaderButton.js";
 import { headerResponsivity } from "./src/scripts/headerResponsivity.js";
-generateHeaderButton(Boolean(localStorage.getItem('isLogged')));
+generateHeaderButton(localStorage.getItem('isLogged') == 'true' ? true : false);
 headerResponsivity();
-localStorage.setItem('isLogged', 'false');
 fetch('https://alura-geek.herokuapp.com/products')
     .then((res) => {
     const spinner = document.querySelector('.spinner-border');

@@ -2,7 +2,7 @@ import { ProductsController } from "../controllers/ProductsController.js";
 import { generateHeaderButton } from "./generateHeaderButton.js";
 import { headerResponsivity } from "./headerResponsivity.js";
 import { inputLabelAnimation } from "./inputLabelAnimation.js";
-generateHeaderButton(Boolean(localStorage.getItem('isLogged')));
+generateHeaderButton(localStorage.getItem('isLogged') == 'true' ? true : false);
 headerResponsivity();
 const input = document.querySelector('.footer__input-text');
 const label = document.querySelector('.footer__form-name');
